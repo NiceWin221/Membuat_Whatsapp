@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       colors: {
         grass: "#00a884",
+        dark: "#0f172a",
+        secondary: "#64748b"
       },
     },
   },
