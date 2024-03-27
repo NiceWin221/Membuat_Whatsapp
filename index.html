@@ -8,42 +8,58 @@
     <title>Whatsapp</title>
   </head>
   <body>
-    <div class="absolute w-full h-[20%] bg-grass"></div>
+    <div class="absolute w-full h-[18%] bg-grass"></div>
     <div class="w-[100vw] h-[100vh] p-5 bg-gray-300">
-      <div class="flex bg-slate-200 w-full h-full relative">
+      <div class="flex bg-slate-200 w-full h-full relative overflow-hidden">
+        <!-- Archive Section Start -->
+
+        <div class="arsip bg-white w-[30%] absolute left-0 top-0 h-full -z-10" style="left: -100%; transition: left 0.5s ease-in-out">
+          <div class="bg-green px-4 flex items-center pt-12">
+            <i class="arsip-back fa-solid fa-arrow-left text-white text-xl p-4 cursor-pointer"></i>
+            <h1 class="text-white text-2xl font-semibold p-4">Diarsipkan</h1>
+          </div>
+          <div class="p-4">
+            <p class="text-sm text-slate-500">
+              Chat tersebut tetap diarsipkan saat pesan baru diterima. Untuk mengubah pengalaman in, buka <span class="text-slate-700 font-bold">Pengaturan</span> > <span class="text-slate-700 font-bold">Chat</span> di telepon Anda.
+            </p>
+          </div>
+        </div>
+
+        <!-- Archive Section End -->
+
         <!-- Section 1 Start -->
 
         <div class="bg-slate-400 w-[30%]">
           <!-- Nav Start -->
 
-          <div class="p-4 bg-sky-200 flex items-center justify-between">
+          <div class="p-4 bg-white flex items-center justify-between">
             <div class="w-10 h-10 overflow-hidden rounded-full">
               <img src="./dist/images/profile.jpg" alt="Windy" />
             </div>
             <nav>
               <ul class="flex gap-8 mx-5">
                 <li>
-                  <span class="text-lg text-slate-500">
+                  <span class="text-lg text-secondary">
                     <i class="fa-solid fa-users"></i>
                   </span>
                 </li>
                 <li>
-                  <span class="text-lg text-slate-500">
+                  <span class="text-lg text-secondary">
                     <i class="fas fa-stream"></i>
                   </span>
                 </li>
                 <li>
-                  <span class="text-lg text-slate-500">
+                  <span class="text-lg text-secondary">
                     <i class="fas fa-signal"></i>
                   </span>
                 </li>
                 <li>
-                  <span class="text-lg text-slate-500">
+                  <span class="text-lg text-secondary">
                     <i class="fa-regular fa-square-plus"></i>
                   </span>
                 </li>
                 <li>
-                  <span class="text-lg text-slate-500">
+                  <span class="text-lg text-secondary">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                   </span>
                 </li>
@@ -55,15 +71,15 @@
 
           <!-- Search Bar Start -->
 
-          <div class="px-4 w-full py-2 bg-white flex items-center">
-            <label for="search" class="px-4 text-sm text-slate-500">
-              <div class="search-toggle relative p-2 flex items-center justify-center">
+          <div class="px-4 w-full py-2 bg-white flex items-center relative">
+            <label for="search" class="px-4 text-sm text-secondary">
+              <div class="relative p-2 flex items-center justify-center">
                 <i class="search-glass fa-solid fa-magnifying-glass absolute transition duration-300 ease-in-out"></i>
-                <i class="arrow-left fa-solid fa-arrow-left absolute opacity-0 transition duration-300 ease-in-out -rotate-90 text-grass"></i>
               </div>
             </label>
+            <i class="arrow-left fa-solid fa-arrow-left transition duration-300 ease-in-out -rotate-90 text-grass absolute ml-4 opacity-0" style="z-index: -1"></i>
             <form class="w-full">
-              <input type="text" name="" id="search" placeholder="Cari atau mulai chat baru" class="w-full py-1 px-3 text-sm outline-none" />
+              <input type="text" name="" id="search" placeholder="Cari atau mulai chat baru" class="search-toggle w-full py-1 px-3 text-sm outline-none" />
             </form>
             <div class="ml-auto">
               <button class="flex flex-wrap w-[14px] gap-[2px] items-center justify-center ml-3">
@@ -75,6 +91,33 @@
           </div>
 
           <!-- Search Bar End -->
+
+          <div class="overflow-scroll h-full bg-white">
+            <!-- Arsip Start -->
+
+            <div class="arsip-toggle px-4 w-full bg-white flex py-2 items-center gap-5 cursor-pointer">
+              <i class="fa-solid fa-box-archive py-2 px-4 text-grass"></i>
+              <h1 class="text-lg cursor-pointer">Diarsipkan</h1>
+            </div>
+
+            <!-- Arsip End -->
+
+            <!-- Chat Start -->
+
+            <div class="relative p-4 flex items-center cursor-pointer group">
+              <img src="dist/images/person1.png" alt="Bryan" class="w-12 h-12 rounded-full" />
+              <div class="ml-4">
+                <h1 class="text-sm font-semibold">Bryan</h1>
+                <p class="text-sm text-secondary">Wei Nig</p>
+              </div>
+              <h1 class="absolute text-sm right-1 top-4 text-secondary">7.35 pm</h1>
+              <span class="absolute -right-4 bottom-4 text-sm text-secondary opacity-0 group-hover:opacity-100 transition group-hover:right-1">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </div>
+
+            <!-- Chat End -->
+          </div>
         </div>
 
         <!-- Section 1 End -->
