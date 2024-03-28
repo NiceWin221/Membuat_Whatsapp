@@ -13,9 +13,9 @@
       <div class="flex bg-slate-200 w-full h-full relative overflow-hidden">
         <!-- Archive Section Start -->
 
-        <div class="arsip bg-white w-[30%] absolute left-0 top-0 h-full -z-10" style="left: -100%; transition: left 0.5s ease-in-out">
+        <div class="arsip bg-white w-[30%] absolute left-0 top-0 h-full" style="left: -100%; transition: left 0.5s ease-in-out; z-index: 20">
           <div class="bg-green px-4 flex items-center pt-12">
-            <i class="arsip-back fa-solid fa-arrow-left text-white text-xl p-4 cursor-pointer"></i>
+            <i class="fa-solid fa-arrow-left text-white text-xl p-4 cursor-pointer arsip-back"></i>
             <h1 class="text-white text-2xl font-semibold p-4">Diarsipkan</h1>
           </div>
           <div class="p-4">
@@ -71,7 +71,7 @@
 
           <!-- Search Bar Start -->
 
-          <div class="px-4 w-full py-2 bg-white flex items-center relative">
+          <div class="px-4 w-full py-2 bg-white flex items-center">
             <label for="search" class="px-4 text-sm text-secondary">
               <div class="relative p-2 flex items-center justify-center">
                 <i class="search-glass fa-solid fa-magnifying-glass absolute transition duration-300 ease-in-out"></i>
@@ -81,18 +81,22 @@
             <form class="w-full">
               <input type="text" name="" id="search" placeholder="Cari atau mulai chat baru" class="search-toggle w-full py-1 px-3 text-sm outline-none" />
             </form>
-            <div class="ml-auto">
-              <button class="flex flex-wrap w-[14px] gap-[2px] items-center justify-center ml-3">
-                <span class="w-[15px] bg-secondary block h-[1.6px]"></span>
-                <span class="w-[9px] bg-secondary block h-[1.6px] mb-[0.2px]"></span>
-                <span class="w-[4px] bg-secondary block h-[1.5px] mb-[0.6px]"></span>
-              </button>
+            <div class="filter-toggle ml-auto text-secondary cursor-pointer p-2 rounded-full flex text-sm items-center justify-center">
+              <i class="fa-solid fa-filter"></i>
             </div>
           </div>
 
           <!-- Search Bar End -->
 
-          <div class="overflow-scroll h-full bg-white">
+          <div class="overflow-scroll h-full bg-white relative">
+            <!-- Filter Start -->
+
+            <div class="filter absolute bg-white z-10 bottom-0 w-full h-full" style="left: -100%; transition: left 0.1s ease-in-out">
+              <h1 class="text-lg text-secondary text-center mt-60">Tidak ada chat yang blom di baca</h1>
+              <p class="text-sm text-secondary text-center mt-4">Bersihkan filter</p>
+            </div>
+
+            <!-- Filter End -->
             <!-- Arsip Start -->
 
             <div class="arsip-toggle px-4 w-full bg-white flex py-2 items-center gap-5 cursor-pointer">
@@ -124,8 +128,21 @@
 
         <!-- Section 2 Start -->
 
-        <div class="bg-slate-700 w-[70%]">
-          <div></div>
+        <div class="w-[70%] h-full bg-white flex justify-center">
+          <div class="items-center bg-white text-center mt-32 w-[65%]">
+            <span class="flex justify-center mb-5">
+              <img src="dist/images/whatsapp.png" alt="whatsapp" class="w-96" />
+            </span>
+            <h1 class="text-3xl text-secondary mb-4">Unduh Whatsapp untuk Windows</h1>
+            <p class="text-base text-secondary leading-relaxed">Buat panggilan, bagikan layar Anda dan dapatkan pengalaman yang lebih cepat saat Anda Mengunduh aplikasi Windows.</p>
+            <div class="flex justify-center">
+              <a href="#" class="text-center block mt-4 bg-green w-fit py-2 px-4 text-white font-semibold rounded-full">Dapatkan dari Microsoft Store</a>
+            </div>
+            <span class="flex justify-center gap-2 mt-28">
+              <i class="fa-solid fa-lock text-sm text-secondary"></i>
+              <p class="text-sm text-secondary">Pesan pribadi Anda terenkripsi secara end-to-end</p>
+            </span>
+          </div>
         </div>
 
         <!-- Section 2 End -->

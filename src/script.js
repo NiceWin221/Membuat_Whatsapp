@@ -25,15 +25,25 @@ const arsipBack = document.querySelector(".arsip-back");
 const arsip = document.querySelector(".arsip");
 
 arsipToggle.addEventListener("click", function () {
-  arsip.classList.toggle("-z-10");
-  arsip.classList.toggle("z-10");
   arsip.style.left = "0";
 });
 
 arsipBack.addEventListener("click", function () {
-  setTimeout(function () {
-    arsip.classList.toggle("-z-10");
-    arsip.classList.toggle("z-10");
-  }, 500);
   arsip.style.left = "-100%";
+});
+
+// Filter Active
+const filterToggle = document.querySelector(".filter-toggle");
+const filter = document.querySelector(".filter");
+
+filterToggle.addEventListener("click", function () {
+  if (filter.style.left === "-100%") {
+    filter.style.left = "0";
+    filterToggle.classList.add("bg-green");
+    filterToggle.classList.add("text-white");
+  } else {
+    filter.style.left = "-100%";
+    filterToggle.classList.remove("bg-green");
+    filterToggle.classList.remove("text-white");
+  }
 });
